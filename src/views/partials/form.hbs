@@ -1,0 +1,90 @@
+<div class="modal-dialog modal-dialog-centered">
+  <div class="modal-content">
+    <div class="modal-header">
+      <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+      <button
+        type="button"
+        class="btn-close"
+        data-bs-dismiss="modal"
+        aria-label="Close"
+      ></button>
+    </div>
+    <div class="modal-body">
+      <form
+        ref="uploadForm"
+        id="uploadForm"
+        action="/upload"
+        method="post"
+        encType="multipart/form-data"
+      >
+        <div class="form-floating mb-3">
+          <input
+            type="text"
+            class="form-control"
+            name="fileName"
+            placeholder="something"
+          />
+          <label for="floatingInput">File Name</label>
+        </div>
+        <div class="mb-3 row g-2">
+          <div class="col-md">
+            <input type="file" name="sampleFile" class="form-item" />
+          </div>
+          <div class="col-md">
+            <div class="form-check">
+              <input
+                class="form-check-input"
+                type="radio"
+                name="picture"
+                id="flexRadioDefault1"
+              />
+              <label class="form-check-label" for="flexRadioDefault1">
+                Picture
+              </label>
+            </div>
+            <div class="form-check">
+              <input
+                class="form-check-input"
+                type="radio"
+                name="pdf"
+                id="flexRadioDefault2"
+                checked
+              />
+              <label class="form-check-label" for="flexRadioDefault2">
+                Pdf
+              </label>
+            </div>
+            <div class="form-check">
+              <input
+                class="form-check-input"
+                type="radio"
+                name="music"
+                id="flexRadioDefault1"
+              />
+              <label class="form-check-label" for="flexRadioDefault1">
+                Music
+              </label>
+            </div>
+            <div class="form-check">
+              <input
+                class="form-check-input"
+                type="radio"
+                name="other"
+                id="flexRadioDefault2"
+                checked
+              />
+              <label class="form-check-label" for="flexRadioDefault2">
+                Other... <span class="text-muted">(No have preview option)</span>
+              </label>
+            </div>
+          </div>
+        </div>
+        <input
+          type="submit"
+          value="Upload!"
+          class="form-control btn btn-success"
+        />
+      </form>
+    </div>
+  </div>
+</div>

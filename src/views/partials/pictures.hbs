@@ -1,0 +1,46 @@
+<div class="p-2 text-light">
+  <div class="dropdown">
+    <div class="row row-cols-1 row-cols-md-3 g-4">
+      {{#each files}}
+      <div class="col">
+        <div class="card">
+          <img class="car-img-top" src="/docs/pictures/{{ this }}" alt="" />
+          <p
+            class="card-title link-success p-2"
+            id="dropdownMenuButton1"
+            data-bs-toggle="dropdown"
+            aria-expanded="false"
+          >
+            {{ this }}
+          </p>
+          <div class="card-footer text-dark"><i>By DropdeadPC</i></div>
+          <ul
+            class="dropdown-menu text-white"
+            aria-labelledby="dropdownMenuButton1"
+            id="opt-button"
+          >
+            <li>
+              <a
+                class="dropdown-item bg-primary"
+                href="/docs/{{ ../typeFile }}/{{ this }}"
+                target="_blank"
+                >Preview</a
+              >
+            </li>
+            <li>
+              <a class="dropdown-item bg-success" href="/download/{{ ../typeFile }}/{{ this }}"
+                >Download</a
+              >
+            </li>
+            <li>
+              <a class="dropdown-item bg-danger" href="/delete/{{ ../typeFile }}/{{ this }}"
+                >Delete</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+      {{/each}}
+    </div>
+  </div>
+</div>

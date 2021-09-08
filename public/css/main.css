@@ -1,0 +1,18 @@
+#opt-button > li > a:hover {
+  transition: all 0.5s ease;
+  color: white;
+}
+
+.card > img {
+  height: 50vh;
+  width: auto;
+  object-fit: cover;
+  /*filter: blur(10px);
+  -webkit-filter: blur(10px);*/
+  transition: all 0.5s ease;
+}
+.card > img:hover {
+  transition: all 0.5s ease;
+  filter: blur(0px);
+  -webkit-fiter: blur(0px);
+}

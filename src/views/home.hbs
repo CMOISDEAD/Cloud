@@ -1,0 +1,21 @@
+<div>
+  <div class="row mx-auto">
+    <div class="col">
+      <div class="container">
+        <h1 class="text-center text-uppercase">Own Cloud</h1>
+        <p class="text-center text-muted">Upload your files.</p>
+        {{> options}}
+        <h5 class="text-center">Files <span class="text-success">:)</span></h5>
+        {{#if folders}}
+          {{> folders}}
+        {{else}}
+          {{#if preview}}
+            {{> pictures}}
+          {{else}}
+            {{> files}}
+          {{/if}}
+        {{/if}}
+      </div>
+    </div>
+  </div>
+</div>
